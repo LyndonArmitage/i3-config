@@ -47,6 +47,7 @@ for_window [title=$calc_title] floating enable
 
 #bindsym $mod+Shift+comma exec --no-startup-id networkmanager_dmenu
 bindsym $mod+p exec --no-startup-id passmenu
+bindsym $mod+Shift+p exec --no-startup-id otpmenu
 bindsym Print exec --no-startup-id screenshot
 #bindsym Print exec "scrot -e 'mv $f ~/Pictures/screenshots/$f'; sleep 1; exec notify-send 'screenshot has been saved to ~/Pictures/screenshots/'"
 bindsym $mod+Print --release exec "scrot -ue 'mv $f ~/Pictures/screenshots/$f'; sleep 1; exec notify-send 'screenshot has been saved to ~/Pictures/screenshots/'"
