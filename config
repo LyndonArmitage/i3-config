@@ -30,10 +30,10 @@ font xft:URWGothic-Book 11
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec terminal; exec --no-startup-id $centre_mouse
+bindsym $mod+Return exec terminal && $centre_mouse
 
 # kill focused window
-bindsym $mod+Shift+q kill
+bindsym $mod+Shift+q kill; exec --no-startup-id $centre_mouse
 
 # start program launcher
 bindsym $mod+d exec --no-startup-id dmenu_recency
