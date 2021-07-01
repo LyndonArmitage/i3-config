@@ -6,6 +6,7 @@ set $mod Mod4
 
 # Set script to centre mouse
 set $centre_mouse ~/.config/i3/centre-mouse
+set $i3_shortcuts_help ~/.config/i3/i3-shortcut-help
 
 # set default desktop layout (default is tiling)
 # workspace_layout tabbed <stacking|tabbed>
@@ -457,4 +458,4 @@ bindsym $mod+slash \
         -P '(rename this workspace to) workspace name: ' \
         -F 'rename workspace to "%s"'
 
-bindsym $mod+Shift+question exec /home/lyndon/repos/c/i3-shortcuts/i3-shortcuts | dmenu -i -l 20
+bindsym $mod+Shift+question exec --no-startup-id $i3_shortcuts_help 

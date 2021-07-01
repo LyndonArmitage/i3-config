@@ -1,0 +1,6 @@
+#!/bin/sh
+
+SHORTCUTS=/home/lyndon/repos/c/i3-shortcuts/i3-shortcuts
+MSG=$($SHORTCUTS | dmenu -i -l 20 -p "i3 shortcut" | awk '{first = $1; $1=""; gsub(/^ /,""); print $0}')
+
+i3-msg "$MSG"
