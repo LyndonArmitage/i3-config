@@ -216,6 +216,7 @@ for_window [class="zoom" instance="zoom" title="zoom"] floating enable
 for_window [class="zoom" instance="zoom" title="Chat"] floating enable
 for_window [class="VirtualBox Manager"] floating enable
 for_window [class="VirtualBox Machine"] floating enable
+for_window [title="Microsoft Teams Notification" window_type="notification"] floating enable
 for_window [class="Surf"] border normal
 
 # switch to workspace with urgent window automatically
