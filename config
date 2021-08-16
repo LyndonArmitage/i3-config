@@ -51,7 +51,7 @@ for_window [title=$calc_title] floating enable
 
 # Launch a simple floating vim window for scratch writing
 set $scratch_vim_title "scratchpad_vim"
-bindsym $mod+9 exec --no-startup-id urxvt -title $scratch_vim_title -e nvim -c "startinsert" /tmp/vim_scratchpad
+bindsym $mod+9 exec --no-startup-id urxvt -title $scratch_vim_title -e nvim -c "set buftype=nofile" -c "startinsert" -
 for_window [title=$scratch_vim_title] floating enable
 
 bindsym $mod+Shift+comma exec --no-startup-id networkmanager_dmenu
