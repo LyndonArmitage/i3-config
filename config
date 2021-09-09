@@ -40,7 +40,7 @@ bindsym $mod+Shift+q kill; exec --no-startup-id $centre_mouse
 bindsym $mod+d exec --no-startup-id dmenu_recency
 bindsym $mod+q exec --no-startup-id /home/lyndon/.local/bin/web-search
 bindsym $mod+Tab exec --no-startup-id rofi -show window
-bindsym $mod+Shift+Return exec --no-startup-id rofi -show file-browser
+bindsym $mod+Shift+Return exec --no-startup-id rofi -show filebrowser
 bindsym XF86Launch1 exec --no-startup-id dmenu_recency
 bindsym XF86Search exec --no-startup-id dmenu_recency
 bindsym XF86Explorer exec --no-startup-id pcmanfm
