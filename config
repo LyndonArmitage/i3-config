@@ -218,6 +218,8 @@ for_window [class="VirtualBox Manager"] floating enable
 for_window [class="VirtualBox Machine"] floating enable
 for_window [title="Microsoft Teams Notification" window_type="notification"] floating enable
 for_window [class="Surf"] border normal
+for_window [class="Yad"] floating enable
+for_window [class="Steam" instance="Steam" title="Friends List"] floating enable
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
