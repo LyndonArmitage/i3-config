@@ -59,8 +59,8 @@ bindsym $mod+p exec --no-startup-id passmenu
 bindsym $mod+Shift+p exec --no-startup-id otpmenu
 bindsym Print exec --no-startup-id screenshot
 #bindsym Print exec "scrot -e 'mv $f ~/Pictures/screenshots/$f'; sleep 1; exec notify-send 'screenshot has been saved to ~/Pictures/screenshots/'"
-bindsym $mod+Print --release exec "scrot -ue 'mv $f ~/Pictures/screenshots/$f'; sleep 1; exec notify-send 'screenshot has been saved to ~/Pictures/screenshots/'"
-bindsym $mod+Shift+Print --release exec "notify-send 'selection will be saved to ~/Pictures/screenshots/'; scrot -se 'mv $f ~/Pictures/screenshots/$f'"
+bindsym $mod+Print --release exec "scrot -u -e 'mv $f ~/Pictures/screenshots/$f'; sleep 1; exec notify-send 'screenshot has been saved to ~/Pictures/screenshots/'"
+bindsym $mod+Shift+Print --release exec "notify-send 'selection will be saved to ~/Pictures/screenshots/'; scrot -s -e 'mv $f ~/Pictures/screenshots/$f'"
 bindsym $mod+Ctrl+x exec xkill
 
 # music control
@@ -220,6 +220,8 @@ for_window [title="Microsoft Teams Notification" window_type="notification"] flo
 for_window [class="Surf"] border normal
 for_window [class="Yad"] floating enable
 for_window [class="Steam" instance="Steam" title="Friends List"] floating enable
+for_window [class="Sil-Q"] floating enable
+for_window [class="jetbrains-ide" instance="jetbrains-ide" title="win0" ] floating enable
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
