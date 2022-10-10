@@ -15,6 +15,11 @@ set $i3_shortcuts_help ~/.config/i3/i3-shortcut-help
 new_window pixel 1
 new_float normal
 
+# Hotfix for new depcrecated values
+default_border pixel 1
+default_floating_border normal
+for_window [all] border pixel 1
+
 # Hide borders
 hide_edge_borders none
 
@@ -222,6 +227,7 @@ for_window [class="Yad"] floating enable
 for_window [class="Steam" instance="Steam" title="Friends List"] floating enable
 for_window [class="Sil-Q"] floating enable
 for_window [class="jetbrains-ide" instance="jetbrains-ide" title="win0" ] floating enable
+for_window [class="jetbrains-ide" instance="jetbrains-ide" title="splash" ] floating enable
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
