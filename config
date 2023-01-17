@@ -54,10 +54,10 @@ set $calc_title "launchedcalculator"
 bindsym XF86Calculator exec --no-startup-id urxvt -title $calc_title -e bc
 for_window [title=$calc_title] floating enable
 
-# Launch a simple floating vim window for scratch writing
-set $scratch_vim_title "scratchpad_vim"
-bindsym $mod+9 exec --no-startup-id urxvt -title $scratch_vim_title -e nvim -c "set buftype=nofile" -c "startinsert" -
-for_window [title=$scratch_vim_title] floating enable
+# Launch a simple floating window for scratch
+set $scratch_title "scratchpad"
+bindsym $mod+9 exec --no-startup-id urxvt -cd /tmp -title $scratch_title -e tmux new -A -s scratchpad
+for_window [title=$scratch_title] floating enable
 
 bindsym $mod+Shift+comma exec --no-startup-id networkmanager_dmenu
 bindsym $mod+p exec --no-startup-id passmenu
@@ -228,6 +228,7 @@ for_window [class="Steam" instance="Steam" title="Friends List"] floating enable
 for_window [class="Sil-Q"] floating enable
 for_window [class="jetbrains-ide" instance="jetbrains-ide" title="win0" ] floating enable
 for_window [class="jetbrains-ide" instance="jetbrains-ide" title="splash" ] floating enable
+for_window [class="com-intellij-updater-Runner"] floating enable
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
