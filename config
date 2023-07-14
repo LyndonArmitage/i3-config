@@ -37,7 +37,7 @@ font xft:URWGothic-Book 11
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec st && $centre_mouse
+bindsym $mod+Return exec alacritty && $centre_mouse
 
 # kill focused window
 bindsym $mod+Shift+q kill; exec --no-startup-id $centre_mouse
@@ -53,13 +53,13 @@ bindsym XF86Explorer exec --no-startup-id pcmanfm
 
 set $calc_title "launchedcalculator"
 #bindsym XF86Calculator exec --no-startup-id urxvt -title $calc_title -e bc
-bindsym XF86Calculator exec --no-startup-id st -t $calc_title bc
+bindsym XF86Calculator exec --no-startup-id alacritty -t $calc_title bc
 for_window [title=$calc_title] floating enable
 
 # Launch a simple floating window for scratch
 set $scratch_title "scratchpad"
 #bindsym $mod+9 exec --no-startup-id urxvt -cd /tmp -title $scratch_title -e tmux new -A -s scratchpad
-bindsym $mod+9 exec --no-startup-id st $new_scratchpad
+bindsym $mod+9 exec --no-startup-id alacritty $new_scratchpad
 for_window [title=$scratch_title] floating enable
 
 bindsym $mod+Shift+comma exec --no-startup-id networkmanager_dmenu
@@ -234,6 +234,7 @@ for_window [class="jetbrains-ide" instance="jetbrains-ide" title="splash" ] floa
 for_window [class="com-intellij-updater-Runner"] floating enable
 for_window [class="com.inkwellideas.ographer.ui.Worldographer"] floating enable
 for_window [class="com-inkwellideas-ographer-ui-Launcher"] floating enable
+for_window [instance="gl" class="mpv"] floating enable
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
