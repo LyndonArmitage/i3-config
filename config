@@ -59,7 +59,7 @@ for_window [title=$calc_title] floating enable
 # Launch a simple floating window for scratch
 set $scratch_title "scratchpad"
 #bindsym $mod+9 exec --no-startup-id urxvt -cd /tmp -title $scratch_title -e tmux new -A -s scratchpad
-bindsym $mod+9 exec --no-startup-id alacritty $new_scratchpad
+bindsym $mod+9 exec --no-startup-id alacritty --title $scratch_title -e $new_scratchpad
 for_window [title=$scratch_title] floating enable
 
 bindsym $mod+Shift+comma exec --no-startup-id networkmanager_dmenu
