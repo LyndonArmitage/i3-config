@@ -232,6 +232,7 @@ for_window [class="Steam" instance="Steam" title="Friends List"] floating enable
 for_window [class="jetbrains-ide" instance="jetbrains-ide" title="win0" ] floating enable
 for_window [class="jetbrains-ide" instance="jetbrains-ide" title="splash" ] floating enable
 for_window [class="jetbrains-ide" instance="jetbrains-ide" title="Welcome to IntelliJ IDEA" ] floating enable
+for_window [class="jetbrains-client" instance="jetbrains-client" ] floating enable
 for_window [class="com-intellij-updater-Runner"] floating enable
 for_window [class="com.inkwellideas.ographer.ui.Worldographer"] floating enable
 for_window [class="com-inkwellideas-ographer-ui-Launcher"] floating enable
@@ -307,7 +308,7 @@ mode "resize" {
 
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id nitrogen --restore; sleep 1; compton -b
+exec --no-startup-id nitrogen --restore; sleep 1; picom -b
 #exec --no-startup-id manjaro-hello
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
