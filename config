@@ -67,8 +67,8 @@ bindsym $mod+p exec --no-startup-id passmenu
 bindsym $mod+Shift+p exec --no-startup-id otpmenu
 bindsym Print exec --no-startup-id screenshot
 #bindsym Print exec "scrot -e 'mv $f ~/Pictures/screenshots/$f'; sleep 1; exec notify-send 'screenshot has been saved to ~/Pictures/screenshots/'"
-bindsym $mod+Print --release exec "scrot -u -e 'mv $f ~/Pictures/screenshots/$f'; sleep 1; exec notify-send 'screenshot has been saved to ~/Pictures/screenshots/'"
-bindsym $mod+Shift+Print --release exec "notify-send 'selection will be saved to ~/Pictures/screenshots/'; scrot -s -e 'mv $f ~/Pictures/screenshots/$f'"
+bindsym $mod+Print --release exec "scrot -u -e 'mv $f ~/Pictures/screenshots/$f'; sleep 1; exec notify-send 'screenshot has been saved to ~/Pictures/screenshots/$f'"
+bindsym $mod+Shift+Print --release exec "notify-send 'selection will be saved to ~/Pictures/screenshots/'; scrot -s -f -e 'mv $f ~/Pictures/screenshots/$f'"
 bindsym $mod+Ctrl+x exec xkill
 
 # music control
